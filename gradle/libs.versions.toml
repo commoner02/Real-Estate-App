@@ -1,5 +1,11 @@
 [versions]
 agp = "8.7.2"
+circleimageview = "3.1.0"
+firebaseAuthVersion = "21.0.1"
+firebaseDatabaseVersion = "20.0.5"
+firebaseFirestoreVersion = "21.4.3"
+glide = "4.12.0"
+googleFirebaseFirestore = "23.0.3"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -13,12 +19,29 @@ navigationFragment = "2.8.4"
 navigationUi = "2.8.4"
 googleGmsGoogleServices = "4.4.2"
 firebaseAuth = "23.1.0"
+firebaseDatabase = "21.0.0"
+firebaseFirestore = "25.1.1"
+firebaseStorage = "21.0.1"
+okhttp = "4.9.2"
+picasso = "2.71828"
+retrofit = "2.9.0"
+firebaseAppdistributionGradle = "5.0.0"
+volley = "1.2.1"
 
 [libraries]
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+firebase-auth-v2101 = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuthVersion" }
+firebase-database-v2005 = { module = "com.google.firebase:firebase-database", version.ref = "firebaseDatabaseVersion" }
+firebase-firestore-v2143 = { module = "com.google.firebase:firebase-firestore", version.ref = "firebaseFirestoreVersion" }
+firebase-firestore-v2303 = { module = "com.google.firebase:firebase-firestore", version.ref = "googleFirebaseFirestore" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
@@ -27,6 +50,14 @@ lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-view
 navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+firebase-appdistribution-gradle = { group = "com.google.firebase", name = "firebase-appdistribution-gradle", version.ref = "firebaseAppdistributionGradle" }
+volley = { module = "com.android.volley:volley", version.ref = "volley" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
