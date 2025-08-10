@@ -1,45 +1,93 @@
-# Real Estate App
-
 ## Overview
-This is a real estate application developed in Java using Android Studio. Users can log in and sign up using Firebase Authentication, add properties, parse online properties via JSON, save them to Firebase, and add properties to their favorites list.
+A comprehensive real estate application developed in Java using Android Studio that provides property listing, user authentication, and property management features. The app integrates with Firebase for authentication, database storage, and cloud functions.
 
-## Features
-- **Firebase Authentication:** Secure user login and signup.
-- **Add Property:** Users can add new properties with details.
-- **JSON Parsing:** Fetch and parse online properties via JSON.
-- **Firebase Database:** Save properties and user data to Firebase.
-- **Favorites:** Users can add properties to their favorites list.
+## Key Features
+- **User Authentication**: Secure login and signup using Firebase Authentication
+- **Property Management**:
+  - Add new property listings with detailed information
+  - View property details with images
+  - Mark properties as favorites
+- **Data Integration**:
+  - Fetch and parse online property data via JSON API
+  - Store property data in Firebase Realtime Database
+- **User Experience**:
+  - Intuitive bottom navigation
+  - Responsive UI with smooth transitions
+  - Loading indicators for network operations
+
+## Technical Architecture
+```
+commoner02-real-estate-app/
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/example/realestateapp/
+│   │   │   │   ├── adapters/          # RecyclerView adapters
+│   │   │   │   ├── fragments/         # UI fragments
+│   │   │   │   ├── listeners/         # Event listeners
+│   │   │   │   ├── models/            # Data models
+│   │   │   │   ├── network/           # API service interfaces
+│   │   │   │   ├── screens/           # Activity classes
+│   │   │   │   ├── utils/             # Utility classes
+│   │   │   │   └── MainActivity.java  # Entry point
+│   │   │   └── res/                   # All resources (layouts, drawables, etc.)
+│   └── build.gradle.kts               # App-level dependencies
+├── build.gradle.kts                   # Project-level configuration
+└── google-services.json               # Firebase configuration
+```
+
+## Dependencies
+- Firebase (Authentication, Realtime Database, Firestore, Storage)
+- Retrofit (for API calls)
+- Glide (for image loading)
+- Volley (for network requests)
+- Material Components (for UI elements)
 
 ## Installation
 1. Clone the repository:
-    ```sh
-    git clone https://github.com/commoner02/Real-Estate-App
-    ```
-2. Open the project in Android Studio.
-3. Sync the project with Gradle files.
-4. Configure Firebase Authentication and Database.
+   ```bash
+   git clone https://github.com/commoner02/Real-Estate-App.git
+   ```
+2. Open the project in Android Studio
+3. Add your Firebase configuration files:
+   - Place `google-services.json` in both project root and app/ directories
+4. Sync Gradle dependencies
+5. Build and run the app
+
+## Configuration
+1. Set up Firebase project:
+   - Enable Authentication (Email/Password)
+   - Enable Realtime Database
+   - Configure security rules as needed
+2. Update API endpoints in `PropertyService.java` if needed
 
 ## Usage
-1. **Login/Signup:**
-    - Users can create an account or log in using Firebase Authentication.
+1. **Authentication**:
+   - Users can register or login using email/password
+   - Password recovery available
 
-2. **Add Property:**
-    - Users can add new properties with details such as name, location, price, etc.
+2. **Property Management**:
+   - Add new properties with details and images
+   - Browse properties from local database or online API
+   - Mark properties as favorites
 
-3. **JSON Parsing:**
-    - Fetch and parse online properties data via JSON and display them in the app.
+3. **Navigation**:
+   - Bottom navigation between Home, Favorites, and Account sections
 
-4. **Save to Firebase:**
-    - Save property details and user data to Firebase Database.
+## Code Quality
+- Follows Android best practices
+- Proper separation of concerns (models, views, controllers)
+- Uses modern Android architecture components
+- Includes error handling and loading states
 
-5. **Favorites:**
-    - Users can add properties to their favorites list for easy access.
+## Screenshots
+(Will add later)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - See [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
-- [Firebase](https://firebase.google.com/)
-- [Android Studio](https://developer.android.com/studio)
-- [JSON](https://www.json.org/)
+## Contributing
+Contributions are welcome! Please fork the repository and submit pull requests.
 
+## Support
+For issues or questions, please open an issue on the GitHub repository.
